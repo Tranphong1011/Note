@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "47881d8fdec31bc4",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fc7f282d4787199",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca132cceaccf7581",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "java.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7161e4770924f9a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2332e15b963cab9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49103a6331ebeddd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ddb21ffd410fa329",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9f15db482a069557",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "5945df619696cc3a",
+    "type": "split",
+    "children": [
+      {
+        "id": "cd1c3e3c48db2cc8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "973e5d5d9747fa13",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "java.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9a980e38364bb30",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "java.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f283f308c80e5664",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1aaf86d360e9db13",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "java.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false
+    }
+  },
+  "active": "ca132cceaccf7581",
+  "lastOpenFiles": [
+    "Pasted image 20230217105428.png.md",
+    "java.md",
+    "clean prj.md",
+    "Japanese.md",
+    "Interview Preparation.md",
+    "mern.md",
+    "C#.md",
+    "api.md",
+    "git.md",
+    "react.md",
+    "Heroku.md"
+  ]
+}

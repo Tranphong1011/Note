@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "0bc0a8b140d005a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "0cf197321794b5b3",
+        "type": "tabs",
+        "children": [
+          {
+<<<<<<< HEAD
+            "id": "c8b15b8ad04a16a0",
+=======
+            "id": "a8a4f9f24596cfd6",
+>>>>>>> 361c51f86c675e63f44a4e7c40dde97fdcd3d70b
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "postgres.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9adde87097ab123f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "my-note/C#.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f8110536b2678b82",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb4924033534e5d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f08839eeedcd857",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3e3a43c307d8f8be",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "71d4db6a5b25e2e5",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+<<<<<<< HEAD
+    "width": 311.5
+=======
+    "width": 300
+>>>>>>> 361c51f86c675e63f44a4e7c40dde97fdcd3d70b
+  },
+  "right": {
+    "id": "a812c59f9159571b",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b5f8e18292f56f9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3370dc93c77b6bc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "postgres.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8bc3e86ddd548ca8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "postgres.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d3f9e9141822b735",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "aac189721bd43431",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "postgres.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+<<<<<<< HEAD
+  "active": "c8b15b8ad04a16a0",
+  "lastOpenFiles": [
+    "my-note/C#.md",
+    "Pasted image 20230316123954.png",
+    "Pasted image 20230316123555.png",
+    "Pasted image 20230316115941.png",
+    "Middleware.md",
+    "Pasted image 20230316113038.png",
+    "ML.md",
+    "Pasted image 20230316074601.png",
+    "Untitled 2.md",
+    "my-note/Excalidraw/Drawing 2022-07-26 14.43.02.excalidraw.md",
+    "my-note/Excalidraw/Drawing 2023-01-05 11.39.11.excalidraw.md",
+    "my-note/Excalidraw/Drawing 2023-01-05 10.49.17.excalidraw.md",
+    "Pasted image 20230313172622.png",
+    "Django.md",
+    "DE.md",
+    "my-note/api.md",
+    "my-note/20220725160945.png",
+    "my-note/Japanese.md",
+    "my-note/Interview Preparation.md",
+    "my-note/http.md",
+    "my-note/Heroku.md",
+    "my-note/git.md",
+    "my-note/mern.md",
+    "my-note/collection + transaction.md",
+    "Pasted image 20230313111935.png",
+    "Pasted image 20230313111915.png",
+    "Pasted image 20230313111834.png",
+    "my-note/java.md",
+    "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
+    "my-note/Excalidraw/Drawing 2022-07-28 14.55.58.excalidraw.md",
+    "New folder",
+    "my-note/ついたち.md",
+    "my-note/Untitled",
+    "my-note/Time arrangement.md",
+    "my-note/tailwin.md",
+    "my-note/test.md",
+    "my-note/spring.md",
+    "my-note/Excalidraw",
+    "my-note"
+=======
+  "active": "a8a4f9f24596cfd6",
+  "lastOpenFiles": [
+    "SQL server.md",
+    "Tiếng nhật ăn liền.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "Middleware.md",
+    "DE.md",
+    "Django.md",
+    "Những điều cần biết.md",
+    "README.md",
+    "postgres.md"
+>>>>>>> 361c51f86c675e63f44a4e7c40dde97fdcd3d70b
+  ]
+}
