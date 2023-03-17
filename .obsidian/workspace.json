@@ -1,30 +1,14 @@
 {
   "main": {
-    "id": "0bc0a8b140d005a5",
+    "id": "e5cb731fb0f74da0",
     "type": "split",
     "children": [
       {
-        "id": "0cf197321794b5b3",
+        "id": "e5e6b2584a830de5",
         "type": "tabs",
         "children": [
           {
-<<<<<<< HEAD
-            "id": "c8b15b8ad04a16a0",
-=======
-            "id": "a8a4f9f24596cfd6",
->>>>>>> 361c51f86c675e63f44a4e7c40dde97fdcd3d70b
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "postgres.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9adde87097ab123f",
+            "id": "0f6d3ccd08f446b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -41,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f8110536b2678b82",
+    "id": "f9279c4243f93ee1",
     "type": "split",
     "children": [
       {
-        "id": "eb4924033534e5d3",
+        "id": "6993b528abbd2240",
         "type": "tabs",
         "children": [
           {
-            "id": "1f08839eeedcd857",
+            "id": "a9ecf8a6ac0b5ace",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -59,7 +43,7 @@
             }
           },
           {
-            "id": "3e3a43c307d8f8be",
+            "id": "c4d2b41ae6088a24",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -74,7 +58,7 @@
             }
           },
           {
-            "id": "71d4db6a5b25e2e5",
+            "id": "85b87cadc6d28aee",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -85,27 +69,23 @@
       }
     ],
     "direction": "horizontal",
-<<<<<<< HEAD
-    "width": 311.5
-=======
     "width": 300
->>>>>>> 361c51f86c675e63f44a4e7c40dde97fdcd3d70b
   },
   "right": {
-    "id": "a812c59f9159571b",
+    "id": "58c4657350972f26",
     "type": "split",
     "children": [
       {
-        "id": "0b5f8e18292f56f9",
+        "id": "8b0c7beac4e893e3",
         "type": "tabs",
         "children": [
           {
-            "id": "c3370dc93c77b6bc",
+            "id": "fc88adba01971dc8",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "postgres.md",
+                "file": "my-note/C#.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,19 +97,19 @@
             }
           },
           {
-            "id": "8bc3e86ddd548ca8",
+            "id": "afa7e4e232ec78ba",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "postgres.md",
+                "file": "my-note/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "d3f9e9141822b735",
+            "id": "9964e06caaa1bb45",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -140,12 +120,12 @@
             }
           },
           {
-            "id": "aac189721bd43431",
+            "id": "01197b8c8e065368",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "postgres.md"
+                "file": "my-note/C#.md"
               }
             }
           }
@@ -153,7 +133,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,61 +147,15 @@
       "command-palette:Open command palette": false
     }
   },
-<<<<<<< HEAD
-  "active": "c8b15b8ad04a16a0",
+  "active": "0f6d3ccd08f446b7",
   "lastOpenFiles": [
+    "Middleware.md",
+    "Pasted image 20230317102850.png",
+    "Pasted image 20230317102848.png",
     "my-note/C#.md",
-    "Pasted image 20230316123954.png",
-    "Pasted image 20230316123555.png",
-    "Pasted image 20230316115941.png",
-    "Middleware.md",
-    "Pasted image 20230316113038.png",
-    "ML.md",
-    "Pasted image 20230316074601.png",
-    "Untitled 2.md",
-    "my-note/Excalidraw/Drawing 2022-07-26 14.43.02.excalidraw.md",
-    "my-note/Excalidraw/Drawing 2023-01-05 11.39.11.excalidraw.md",
-    "my-note/Excalidraw/Drawing 2023-01-05 10.49.17.excalidraw.md",
-    "Pasted image 20230313172622.png",
-    "Django.md",
-    "DE.md",
-    "my-note/api.md",
-    "my-note/20220725160945.png",
-    "my-note/Japanese.md",
-    "my-note/Interview Preparation.md",
-    "my-note/http.md",
-    "my-note/Heroku.md",
-    "my-note/git.md",
-    "my-note/mern.md",
-    "my-note/collection + transaction.md",
-    "Pasted image 20230313111935.png",
-    "Pasted image 20230313111915.png",
-    "Pasted image 20230313111834.png",
-    "my-note/java.md",
-    "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
-    "my-note/Excalidraw/Drawing 2022-07-28 14.55.58.excalidraw.md",
-    "New folder",
-    "my-note/ついたち.md",
-    "my-note/Untitled",
-    "my-note/Time arrangement.md",
-    "my-note/tailwin.md",
-    "my-note/test.md",
+    "my-note/react.md",
     "my-note/spring.md",
-    "my-note/Excalidraw",
-    "my-note"
-=======
-  "active": "a8a4f9f24596cfd6",
-  "lastOpenFiles": [
-    "SQL server.md",
-    "Tiếng nhật ăn liền.md",
-    "Untitled.md",
-    "Untitled 1.md",
-    "Middleware.md",
-    "DE.md",
-    "Django.md",
-    "Những điều cần biết.md",
-    "README.md",
-    "postgres.md"
->>>>>>> 361c51f86c675e63f44a4e7c40dde97fdcd3d70b
+    "my-note/tailwin.md",
+    "my-note/test.md"
   ]
 }

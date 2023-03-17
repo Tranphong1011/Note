@@ -650,3 +650,7 @@ static void Main(string[] args)
 }
 ```
 ->System.ArithmeticException: 'Access denied - You must be at least 18 years old.'
+
+--------
+Dotnet 
+Create a new project: chọn ASP.NET Core web app (Model-View-Controller)

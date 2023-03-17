@@ -290,3 +290,13 @@ Chú ý các dữ kiện sau:
 Laneige Taiwan: TW10
 Sulwhasoo Taiwan: TW20
 Laneige Vietnam: VN10
+
+W: pos, HK: poshk, MY: posmy
+BRAND (品牌)  
+SWS, LNG, AP
+
+1. when the referral value is null => default value  
+2. when the referral value is friend referral code => default value  
+3. when the referral value is BC referral code => interface the BC referral code to POS
+![[Pasted image 20230317102850.png]]
+
