@@ -1,5 +1,9 @@
 Connect Cissco
 Staging
+Test postman cho stagin;
+[https://stg-gecp-middleware.amorepacific.com/middleware/api/getUserData](https://stg-gecp-middleware.amorepacific.com/middleware/api/getUserData)
+
+
 https://stg-gecp-middleware-adm.amorepacific.com/ap-admin/main/users/signin.fo
 ![[Pasted image 20230222131030.png]]
 username: test01
@@ -23,6 +27,11 @@ password: amore@2021
 url: jdbc:mysql://apse1-apprd-gecp-mysql-01.ccv7hpoxvym6.ap-southeast-1.rds.amazonaws.com:3368/gecpprd?characterEncoding=utf8
 username: gecpown
 password: gecpown!23
+
+    url: jdbc:mysql://localhost:3306/gecpstg?characterEncoding=utf8
+    username: root
+    password: Phong093528@
+
 
 Đăng nhập email: 
 https://ap-on.amorepacific.com/
@@ -291,7 +300,7 @@ Laneige Taiwan: TW10
 Sulwhasoo Taiwan: TW20
 Laneige Vietnam: VN10
 
-W: pos, HK: poshk, MY: posmy
+TW: pos, HK: poshk, MY: posmy
 BRAND (品牌)  
 SWS, LNG, AP
 
@@ -300,3 +309,21 @@ SWS, LNG, AP
 3. when the referral value is BC referral code => interface the BC referral code to POS
 ![[Pasted image 20230317102850.png]]
 
+
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found
+
+connect ko đc :  Search anyconnect để kết nối
+Hoặc renew  lại ip config: ipconfig /renew, igpconfig /all
+![[Pasted image 20230321115807.png]]
+
+hoặc là vô [AMOREPACIFIC GROUP](https://ap-on.amorepacific.com/), bỏ s sau http, vô sẽ có link drive để tải card về, restart và kết nối
+
+IF_EC_007 : EC-POS  magento from Taiwan to POS
+IF_HK_007: EC_POS  magento from Hongkon to POS
+IF_MY_007: EC_POS  magento from Malaysia to POS
+
+4000049039
+4000049096
+4000049090
+4000049078

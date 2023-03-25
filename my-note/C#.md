@@ -654,3 +654,15 @@ static void Main(string[] args)
 --------
 Dotnet 
 Create a new project: chọn ASP.NET Core web app (Model-View-Controller)
+
+-----
+Dotnet - DatingApp
+dotnet --info: kiểm tra thông tin
+dotnet -h : help
+dotnet new list: các template làm việc của dotnet
+dotnet new sln : tạo new solution
+dotnet new webapi -n API: tạo 1 thư mục folder
+dotnet sln add API : add API project vào solution
+Sử dụng VSC hoặc visual studio, bật terminal, CD API sau đó dotnet run
+
+Ctrol C để stop
