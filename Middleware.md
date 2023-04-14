@@ -2,7 +2,8 @@ Connect Cissco
 Staging
 Test postman cho stagin;
 [https://stg-gecp-middleware.amorepacific.com/middleware/api/getUserData](https://stg-gecp-middleware.amorepacific.com/middleware/api/getUserData)
-
+test postman cho prd
+[https://gecp-middleware.amorepacific.com/middleware/api/getUserData](https://gecp-middleware.amorepacific.com/middleware/api/getUserData)
 
 https://stg-gecp-middleware-adm.amorepacific.com/ap-admin/main/users/signin.fo
 ![[Pasted image 20230222131030.png]]
@@ -323,7 +324,51 @@ IF_EC_007 : EC-POS  magento from Taiwan to POS
 IF_HK_007: EC_POS  magento from Hongkon to POS
 IF_MY_007: EC_POS  magento from Malaysia to POS
 
-4000049039
-4000049096
-4000049090
-4000049078
+I/O error on POST request for "http://PRV-BO-LB-PRD-EAI-NLB-EAIAPP-6cb2ab6089253ccf.elb.ap-northeast-2.amazonaws.com:5510/restv2/restSDI8177_MALL_GECP_INNI_SAP_P": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+![[Pasted image 20230327094001.png]]
+![[Pasted image 20230327094024.png]]
+
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> <html><head> <title>503 Service Unavailable</title> </head><body> <h1>Service Unavailable</h1> <p>The server is temporarily unable to service your request due to maintenance downtime or capacity problems. Please try again later.</p> </body></html>
+
+{"AUTH_KEY":"1b2h3i3o","localeCd":"en","API_ID":"IF_MY_004","API_USER_ID":"MY_LNG_Magento","salOrgCd":"MY10","salOffCd":"MY10","cstmIntgSeq":"MY10210010679"}
+
+{"AUTH_KEY":"1b2h3i3o","localeCd":"en","API_ID":"IF_MY_004","API_USER_ID":"MY_LNG_Magento","salOrgCd":"MY10","salOffCd":"MY10","cstmIntgSeq":"MY10210010679"}
+
+{"AUTH_KEY":"1b2h3i3o","localeCd":"en","API_ID":"IF_MY_004","API_USER_ID":"MY_LNG_Magento","salOrgCd":"MY10","salOffCd":"MY10","cstmIntgSeq":"MY10210010679"}
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> <html><head> <title>503 Service Unavailable</title> </head><body> <h1>Service Unavailable</h1> <p>The server is temporarily unable to service your request due to maintenance downtime or capacity problems. Please try again later.</p> </body></html>
+
+I/O error on POST request for "http://PRV-BO-LB-PRD-EAI-NLB-EAIAPP-6cb2ab6089253ccf.elb.ap-northeast-2.amazonaws.com:5510/restv2/restSDI8177_MALL_GECP_INNI_SAP_P": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+
+{"response":{"header":{"rtn_MSG":"[Error] - [ART.117.4002] Adapter Runtime (Adapter Service): Unable to invoke adapter service AP_SD_02.ZSD_IF_RCV_MALL_ORDER_CONFIRM.adapter.sap:tgtSAP_ZSD_IF_RCV_MALL_ORDER_CONFIRM.\n[ART.117.4012] Ada","rtn_TYPE":"F"},"output":null}}
+
+![[Pasted image 20230328115655.png]]
+
+GPT-4, DALL-E 2, and Midjourney
+https://www.refraction.dev/app/unit-tests : tạo test case, refractor 
+https://www.producthunt.com/
+https://www.coursera.org/learn/material-informatics#syllabus
+https://link.springer.com/article/10.1007/s43939-021-00012-0
+
+```json
+  "statusMessage": "nested exception is org.apache.ibatis.exceptions.PersistenceException: \n### Error updating database. Cause: java.lang.reflect.UndeclaredThrowableException\n### The error may involve API001.API0100701I-Inline\n### The error occurred while setting parameters\n### SQL: INSERT INTO GSAL01MT_EC(salOrgCd , salOffCd , saledate , orderID , rcptNO , cstmIntgSeq , orderType , promotionKey , prdCD , qty , price , salAmt , dcAmt , netSalAmt , salItem , flag , regDate , regEmpID , REDEMPTION_FLAG , POINT_ACCOUNT , COMPANY , TAXID , ADDRESS , EMAIL , MOBILE ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, ?,?,?,?,?,?,?,? )\n### Cause: java.lang.reflect.UndeclaredThrowableException"
+```
+{"saletime":"13:50:22","promotionKey":"SWSNEW","orderType":"000030","orderID":"CSWS000004404","rcptNO":"I6000003027","salOffCd":"HK20","AUTH_KEY":"123456","ffReferralCode":"","API_ID":"IF_HK_007","API_USER_ID":"HK_SWS_Magento","saledate":"20230403","orderInfo":[{"prdCD":"111174319","qty":1,"price":"1960.00","salAmt":"1960.00","dcAmt":"196.00","netSalAmt":"1764.00","redemptionFlag":"N","pointAccount":0},{"prdCD":"111247878","qty":2,"price":"0.00","salAmt":"0.00","dcAmt":"0.00","netSalAmt":"0.00","redemptionFlag":"N","pointAccount":0},{"prdCD":"111247536","qty":2,"price":"0.00","salAmt":"0.00","dcAmt":"0.00","netSalAmt":"0.00","redemptionFlag":"N","pointAccount":0}],"salOrgCd":"HK20","baReferralCode":"SWS GECP","cstmIntgSeq":"HK20210001769"}
+
+{"statusCode":"","statusMessage":"nested exception is org.apache.ibatis.exceptions.PersistenceException: \n### Error updating database. Cause: java.lang.reflect.UndeclaredThrowableException\n### The error may involve API001.API0100701I-Inline\n### The error occurred while setting parameters\n### SQL: INSERT INTO GSAL01MT_EC(salOrgCd , salOffCd , saledate , orderID , rcptNO , cstmIntgSeq , orderType , promotionKey , prdCD , qty , price , salAmt , dcAmt , netSalAmt , salItem , flag , regDate , regEmpID , REDEMPTION_FLAG , POINT_ACCOUNT , COMPANY , TAXID , ADDRESS , EMAIL , MOBILE ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, ?,?,?,?,?,?,?,? )\n### Cause: java.lang.reflect.UndeclaredThrowableException"}
+
+{"statusMessage":"\n### Error updating database. Cause: java.sql.SQLException: ORA-12899: value too large for column \"IGPOWN\".\"GCTR40DT\".\"DATA1\" (actual: 4835, maximum: 4000)\nORA-06512: at \"IGPOWN.P_SETLOG\", line 75\nORA-06512: at \"IGPOWN.P_SETLOG\", line 53\nORA-06512: at \"IGPOWN.P_SETLOG\", line 47\nORA-06512: at line 1\n\n### The error may involve query.inf029.INF0030088P-Inline\n### The error occurred while setting parameters\n### SQL: {call P_SETLOG( ?, ?, ?, ?, ?, ?, ?, ? )}\n### Cause: java.sql.SQLException: ORA-12899: value too large for column \"IGPOWN\".\"GCTR40DT\".\"DATA1\" (actual: 4835, maximum: 4000)\nORA-06512: at \"IGPOWN.P_SETLOG\", line 75\nORA-06512: at \"IGPOWN.P_SETLOG\", line 53\nORA-06512: at \"IGPOWN.P_SETLOG\", line 47\nORA-06512: at line 1\n\n; uncategorized SQLException; SQL state [72000]; error code [12899]; ORA-12899: value too large for column \"IGPOWN\".\"GCTR40DT\".\"DATA1\" (actual: 4835, maximum: 4000)\nORA-06512: at \"IGPOWN.P_SETLOG\", line 75\nORA-06512: at \"IGPOWN.P_SETLOG\", line 53\nORA-06512: at \"IGPOWN.P_SETLOG\", line 47\nORA-06512: at line 1\n; nested exception is java.sql.SQLException: ORA-12899: value too large for column \"IGPOWN\".\"GCTR40DT\".\"DATA1\" (actual: 4835, maximum: 4000)\nORA-06512: at \"IGPOWN.P_SETLOG\", line 75\nORA-06512: at \"IGPOWN.P_SETLOG\", line 53\nORA-06512: at \"IGPOWN.P_SETLOG\", line 47\nORA-06512: at line 1\n","statusCode":"E"}
+
+![[Pasted image 20230404113345.png]]
+
+
+Date of work : 2024.04.04  
+Name :  Phong
+Name (Korean) :  민재 (Min Jae)
+Name (English) :  Will 
+Birthday :  10-11-1997
+AP E-mail  : tranthanh.cj@amorepacific.com
+PC Mac Address : E0-0A-F6-95-0D-3F
+
+I/O error on POST request for "https://g-ext.innisfreepos.com/v1/directmall/member/search": g-ext.innisfreepos.com; nested exception is java.net.UnknownHostException: g-ext.innisfreepos.com
