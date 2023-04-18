@@ -10,6 +10,9 @@ https://stg-gecp-middleware-adm.amorepacific.com/ap-admin/main/users/signin.fo
 username: test01
 password: password
 
+password moba: Phongtran97
+
+
 đăng nhập git: https://gitlab.apdigit.tech/
 Gitlab 계정 아이디 : tranthanh.cj 
 Gitlab 계정 패스워드: h!EwUxN9Wk
@@ -372,3 +375,106 @@ AP E-mail  : tranthanh.cj@amorepacific.com
 PC Mac Address : E0-0A-F6-95-0D-3F
 
 I/O error on POST request for "https://g-ext.innisfreepos.com/v1/directmall/member/search": g-ext.innisfreepos.com; nested exception is java.net.UnknownHostException: g-ext.innisfreepos.com
+
+
+Apache CXF 3.3.6 -> 3.5.5  
+Apache Commons Collections 3.2.1 -> 3.2.2  
+Springframework 5.2.1 -> 6.0.7
+
+{"statusMessage":"Error pointUpdate. [ points have been exceeded. remaining points :20 ]","statusCode":"E"}
+
+When updating the Spring Framework from version 5.2.1 to 5.3.27, you may also need to update several other dependencies to ensure compatibility. Here's a list of some common dependencies and their recommended versions to use with Spring Framework 5.3.27:
+
+1. Spring Boot: Update to version 2.6.3 or any other version in the 2.6.x series. Spring Boot versions are paired with a specific Spring Framework version.
+
+2. Spring Security: Update to version 5.6.2 or any other version in the 5.6.x series.
+
+3. Spring Data: Update to version 2021.1.3 or any other version in the 2021.1.x series.
+
+4. Spring Cloud: Update to version 2021.0.0 or any other version in the 2021.0.x series.
+
+5. Hibernate: Update to version 5.6.7 or any other version in the 5.6.x series.
+
+6. Spring Integration: Update to version 5.5.9 or any other version in the 5.5.x series.
+
+7. Spring Batch: Update to version 4.3.5 or any other version in the 4.3.x series.
+
+8. Apache Tomcat (if using an embedded servlet container): Update to version 9.0.59 or any other version in the 9.0.x series.
+
+9. Jackson (for JSON processing): Update to version 2.13.2 or any other version in the 2.13.x series.
+
+10. Thymeleaf (for template processing): Update to version 3.0.14 or any other version in the 3.0.x series.
+
+These are just some common examples, and your project may have additional dependencies that need to be updated. Keep in mind that it's essential to run tests and verify that your application still works correctly after updating all these dependencies. Make sure to consult the documentation for each project to check for any breaking changes or known compatibility issues.
+
+
+When updating the Spring Framework from version 5.2.1 to 5.3.27, you might need to update the following dependencies:
+
+1. Spring Boot: Update to the latest compatible version (e.g., 2.5.x or 2.6.x) which supports Spring Framework 5.3. By updating Spring Boot, you will also update many of the related dependencies that Spring Boot manages.
+
+2. Spring Security: Update to a compatible version (e.g., 5.5.x or 5.6.x) if you are using it in your project.
+
+3. Spring Data: Update to a compatible version (e.g., 2020.0.x or 2021.0.x) if you are using any of the Spring Data projects.
+
+4. Spring Cloud: If you are using Spring Cloud, update to a compatible version (e.g., 2020.0.x or 2021.0.x).
+
+5. Hibernate: Update to a compatible version (e.g., 5.4.x or 5.6.x) if you are using it for JPA or as ORM.
+
+6. Jackson: Update to a compatible version (e.g., 2.11.x, 2.12.x, or 2.13.x) if you are using it for JSON serialization or deserialization.
+
+7. Apache Tomcat: Update to a compatible version (e.g., 9.0.x or 10.0.x) if you are using it as your web server.
+
+8. Other third-party libraries: Ensure that any other third-party libraries you are using are compatible with Spring Framework 5.3. Individual libraries might have specific requirements or breaking changes, so be sure to check their release notes and change logs.
+
+Before making these updates, it is advisable to review the release notes and migration guides for each dependency to understand any changes or breaking changes, and to address them accordingly in your application. Additionally, make sure to thoroughly test your application after updating the dependencies to ensure that everything works as expected
+
+
+```groovy
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'war'
+}
+```
+
+```groovy
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.12.5'
+}
+```
+
+It's important to notice that some of your dependencies are duplicated, and it's a good practice to keep only the latest version of each dependency to avoid conflicts or unexpected behaviors.  
+  
+Here are the recommended upgrades based on your [build.gr](http://build.gr/)adle file:  
+  
+Update the Spring Boot version to the latest stable version: 2.6.1  
+id '[org.springframework.bo](http://org.springframework.bo/)ot' version '2.6.1'  
+Remove the redundant gson dependency; Jackson is already being used:  
+implementation '[com.google.code.gs](http://com.google.code.gs/)on:gson:2.8.6' // remove this line  
+Update the Jackson version and use the same version for all Jackson dependencies:  
+implementation '[com.fasterxml.jackson.co](http://com.fasterxml.jackson.co/)re:jackson-core:2.13.0'  
+compile group: '[com.fasterxml.jackson.co](http://com.fasterxml.jackson.co/)re', name: 'jackson-databind', version: '2.13.0'  
+compile group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: '2.13.0'  
+compile group: '[com.fasterxml.jackson.co](http://com.fasterxml.jackson.co/)re', name: 'jackson-core', version: '2.13.0'  
+Update the Apache CXF version:  
+compile group: '[org.apache.cx](http://org.apache.cx/)f', name: 'cxf-core', version: '3.5.0'  
+compile group: '[org.apache.cx](http://org.apache.cx/)f', name: 'cxf-spring-boot-starter-jaxrs', version: '3.5.0'  
+Update the json-lib version:  
+compile group: 'net.sf.json-lib', name: 'json-lib', version: '2.4', classifier: 'jdk15'  
+Remove the redundant JSON library:  
+compile group: 'org.json', name: 'json', version: '20190722' // remove this line  
+Remove the redundant Jackson Mapper:  
+compile group: '[org.co](http://org.co/)dehaus.jackson', name: 'jackson-mapper-asl', version: '1.5.0' // remove this line  
+Update Tomcat to the latest version:  
+implementation group: '[org.apache.to](http://org.apache.to/)mcat.embed', name: 'tomcat-embed-jasper', version: '10.0.13'  
+Apply these changes to your [build.gr](http://build.gr/)adle file, and you should have the latest compatible versions of your dependencies. Remember to always check for compatibility between library versions before upgrading to ensure a smooth transition.  
+
+
+  
+vn-master" nhánh của admin
+vn-front: nhánh của frontpage
+querydsl
+
+![[Pasted image 20230418164106.png]]
+![[Pasted image 20230418164146.png]]
