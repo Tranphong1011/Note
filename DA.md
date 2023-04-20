@@ -17,9 +17,3 @@ I/O error on POST request for "https://g-ext.innisfreepos.com/v1/directmall/orde
 I/O error on POST request for "https://g-ext.innisfreepos.com/v1/directmall/member/search": g-ext.innisfreepos.com; nested exception is java.net.UnknownHostException: g-ext.innisfreepos.com
 I/O error on POST request for "https://g-ext.innisfreepos.com/v1/directmall/member/search": g-ext.innisfreepos.com; nested exception is java.net.UnknownHostException: g-ext.innisfreepos.com
 
-
-
-
-Mạnh nhất: NaOH, KOH, Ba(OH)2 (tan được)
-Mạnh vừa: Ca(OH)2, Mg(OH)2, Al(OH) (tan ít - không tan)
-Yếu: Cu(OH)2, Fe(OH)3, Fe(OH)2 (không tan)

@@ -243,11 +243,3 @@ print(rectangle1.compare_area(rectangle2))  # In ra: This rectangle has a smalle
 
 ```
 
-
-
-SQL và NoSQL:
-
-Postgres
-MySQl
-SQL server
-MariaDB

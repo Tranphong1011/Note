@@ -654,6 +654,36 @@ static void Main(string[] args)
 --------
 Dotnet 
 Create a new project: chọn ASP.NET Core web app (Model-View-Controller)
+```
+In the `Error` method of the `HomeController`, the line of code `RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier` sets the `RequestId` property of an `ErrorViewModel` object to either the current activity's `Id` property or a new `TraceIdentifier` if the `Id` property is `null`.
+
+Let's break it down:
+
+-   `Activity.Current` is a property that gets the currently executing `Activity` instance. An `Activity` is a logical unit of work that can contain one or more `Span` instances.
+-   The `?.` is the null-conditional operator. It checks if `Activity.Current` is `null` before trying to access its `Id` property. If `Activity.Current` is `null`, the whole expression will be `null`.
+-   `??` is the null-coalescing operator. It returns the left-hand operand if it is not `null`, otherwise it returns the right-hand operand.
+-   `HttpContext.TraceIdentifier` gets a unique identifier for the current HTTP request. If `Activity.Current` is `null`, the `TraceIdentifier` is used as the `RequestId`.
+
+So, in summary, the `RequestId` property is set to a unique identifier for the current activity if it exists, otherwise it's set to a unique identifier for the current HTTP request. This is useful for tracking errors and debugging in distributed systems.
+```
+The "@" symbol indicates that this is a code block, and the curly braces contain C# code.
+```
+`@model ErrorViewModel` is a directive in Razor syntax that specifies the type of the model that is passed to the view. In this case, the `Error.cshtml` view expects to receive an instance of the `ErrorViewModel` class.
+
+By specifying the model type with `@model`, the view can then access the properties and methods of the `ErrorViewModel` object using the `Model` property. For example, if `ErrorViewModel` has a property called `ErrorMessage`, the view could display it using `@Model.ErrorMessage`.
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 -----
 Dotnet - DatingApp
