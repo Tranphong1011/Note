@@ -243,11 +243,31 @@ print(rectangle1.compare_area(rectangle2))  # In ra: This rectangle has a smalle
 
 ```
 
+-------------
+Nhập thư viện
+import cv2
+from google.colab.patches import cv2_imshow : chỉ có thể dùng được trên google, nếu ở jupyter note thì sử dụng cv2.imshow():
+Ví dụ
+```python
+image = cv2.imread('example/image.png')  
+cv2.imshow("test", image)
+```
 
+Định dạng mặc định IMREAD_COLOR thì ảnh đọc lên sẽ có ma trận (Height, Width, Channel) với Channel là 3 tương ứng với kênh màu Blue , Green và Red
 
-SQL và NoSQL:
+Kiểm tra kích thước ma trận:
+```python
+img.shape
+# (512,512,3) : với 3 là số kênh màu
+```
 
-Postgres
-MySQl
-SQL server
-MariaDB
+Chuyển ảnh thành màu xám:
+```python
+gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+```
+
+Lưu ảnh vào thư mục hiện hành:
+```python
+cv2.imwrite("gray_image.jpg", gray_img)
+```
+trả về True là thành công
