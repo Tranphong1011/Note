@@ -500,3 +500,20 @@ Resizing:
 ```
 resize_img = cv2.resize(img,(260,260),interpolation = cv2.INTER_AREA)
 ```
+
+Xử lý văn bản:
+Tách câu - > sử dụng hàm sent_tokenize
+```python
+nltk.download('punkt') # tải dữ liệu chứa các từ kí tự dùng để phân tách
+from nltk.tokenize import sent_tokenize
+```
+Tách từ:
+```python
+from nltk.tokenize import word_tokenize
+```
+
+Loại bỏ từ không quan trọng
+```python
+nltk.download('stopwords')
+from nltk.tokenize import stopwords
+```
