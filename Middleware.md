@@ -478,3 +478,13 @@ querydsl
 
 ![[Pasted image 20230418164106.png]]
 ![[Pasted image 20230418164146.png]]
+
+link deploy:
+[https://dev-jenkins.amorepacific.com/](https://dev-jenkins.amorepacific.com/)
+
+vn front và vn admin : build mới nhất
+pwd
+/data/logs/vn
+
+igvapp: insert, update, select
+igvon: thay đổi table

@@ -18,16 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "240670bdd8775d96",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md"
-              }
-            }
           }
         ]
       }
@@ -160,16 +150,16 @@
   },
   "active": "c3bfad8bd7ec280b",
   "lastOpenFiles": [
+    "ML.md",
+    "Middleware.md",
+    "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
     "Pasted image 20230418164146.png",
     "Pasted image 20230418164106.png",
-    "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
     "my-note/Excalidraw/Drawing 2023-01-05 11.39.11.excalidraw.md",
     "my-note/Excalidraw/Drawing 2023-01-05 10.49.17.excalidraw.md",
     "my-note/Excalidraw/Drawing 2022-07-28 14.55.58.excalidraw.md",
     "my-note/Excalidraw/Drawing 2022-07-26 14.43.02.excalidraw.md",
-    "ML.md",
     "DA.md",
-    "Middleware.md",
     "Django.md",
     "Kotlin.md",
     "Pasted image 20230410095819.png",
@@ -184,7 +174,6 @@
     "my-note/java.md",
     "JSP.md",
     "Pasted image 20230328115655.png",
-    "Pasted image 20230327094024.png",
     "my-note/C#.md",
     "my-note/collection + transaction.md",
     "my-note/css-note.md",

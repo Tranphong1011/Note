@@ -243,3 +243,260 @@ print(rectangle1.compare_area(rectangle2))  # In ra: This rectangle has a smalle
 
 ```
 
+
+## Public: Mặc định
+
+## Protected: 
+
+Protected members of a class are accessible from within the class and are also available to its sub-classes. No other environment is permitted access to it. This enables specific resources of the parent class to be inherited by the child class.
+
+Python's convention to make an instance variable **protected** is to add a prefix _ (single underscore) to it. This effectively prevents it from being accessed unless it is from within a sub-class.
+
+```python
+class Student:
+    _schoolName = 'XYZ School' # protected class attribute
+    
+    def __init__(self, name, age):
+        self._name=name  # protected instance attribute
+        self._age=age # protected instance attribute
+```
+
+In fact, this doesn't prevent instance variables from accessing or modifying the instance. You can still perform the following operations:
+
+```python
+>>> std = Student("Swati", 25)
+>>> std._name
+'Swati'
+>>> std._name = 'Dipa'
+>>> std._name
+'Dipa'
+```
+
+However, you can define a property using [property decorator](https://www.tutorialsteacher.com/python/property-decorator) and make it protected, as shown below.
+
+```python
+class Student:
+	def __init__(self,name):
+		self._name = name
+	@property
+	def name(self):
+		return self._name
+	@name.setter
+	def name(self,newname):
+		self._name = newname
+```
+
+Above, @property decorator is used to make the `name()` method as property and `@name.setter` decorator to another overloads of the `name()` method as property setter method. Now, `_name` is protected.
+
+```python
+>>> std = Student("Swati")
+>>> std.name
+'Swati'
+>>> std.name = 'Dipa'
+>>> std.name
+'Dipa'
+>>> std._name # still accessible
+```
+
+Above, we used `std.name` property to modify `_name` attribute. However, it is still accessible in Python. Hence, the responsible programmer would refrain from accessing and modifying instance variables prefixed with `_` from outside its class.
+
+## Private Members
+
+Python doesn't have any mechanism that effectively restricts access to any instance variable or method. Python prescribes a convention of prefixing the name of the variable/method with a single or double underscore to emulate the behavior of protected and private access specifiers.
+
+The double underscore `__` prefixed to a variable makes it **private**. It gives a strong suggestion not to touch it from outside the class. Any attempt to do so will result in an AttributeError:
+
+Example: Private Attributes
+
+ Copy
+
+```python
+class Student:
+    __schoolName = 'XYZ School' # private class attribute
+
+    def __init__(self, name, age):
+        self.__name=name  # private instance attribute
+        self.__salary=age # private instance attribute
+    def __display(self):  # private method
+	    print('This is private method.')
+```
+
+```python
+>>> std = Student("Bill", 25)
+>>> std.__schoolName
+AttributeError: 'Student' object has no attribute '__schoolName'
+>>> std.__name
+AttributeError: 'Student' object has no attribute '__name'
+>>> std.__display()
+AttributeError: 'Student' object has no attribute '__display'
+```
+
+Python performs name mangling of private variables. Every member with a double underscore will be changed to `_object._class__variable`. So, it can still be accessed from outside the class, but the practice should be refrained.
+
+```python
+>>> std = Student("Bill", 25)
+>>> std._Student__name
+'Bill'
+>>> std._Student__name = 'Steve'
+>>> std._Student__name
+'Steve'
+>>> std._Student__display()
+'This is private method.'
+```
+
+
+Decorator:
+Consider that we have the `greet()` function, as shown below.
+
+```python
+def greet():
+	print('Hello! ', end='')
+```
+
+Now, we can extend the above function's functionality without modifying it by passing it to another function, as shown below.
+
+```python
+def mydecorator(fn):
+	fn()
+	print('How are you?')
+```
+
+Above, the `mydecorator()` function takes a function as an argument. It calls the argument function and also prints some additional things. Thus, it extends the functionality of the `greet()` function 
+
+```python
+>>> mydecorator(greet)
+Hello! How are you?
+```
+
+The `mydecorator()` is not a decorator in Python. The decorator in Python can be defined over any appropriate function using the `@decorator_function_name` syntax to extend the functionality of the underlying function.
+The following defines the decorator for the above `greet()` function.
+```python
+def mydecorator(fn):
+    def inner_function():        
+        fn()
+        print('How are you?')
+    return inner_function
+```
+
+The `mydecorator()` function is the decorator function that takes a function (any function that does not take any argument) as an argument. The inner function `inner_function()` can access the outer function's argument, so it executes some code before or after to extend the functionality before calling the argument function. The `mydecorator` function returns an inner function.
+Now, we can use `mydecorator` as a decorator to apply over a function that does not take any argument, as shown below.
+```python
+@mydecorator
+def greet():
+	print('Hello! ', end='')
+```
+Now, calling the above `greet()` function will give the following output.
+
+```python
+>>> greet()
+Hello! How are you?
+```
+
+The `mydecorator` can be applied to any function that does not require any argument. For example:
+
+```python
+@mydecorator
+def dosomething():
+	print('I am doing something.', end='')
+```
+
+
+```python
+>>> dosomething()
+I am doing something. How are you?
+```
+
+The typical decorator function will look like below.
+
+```python
+def mydecoratorfunction(some_function): # decorator function
+    def inner_function(): 
+        # write code to extend the behavior of some_function()
+        some_function() # call some_function
+        # write code to extend the behavior of some_function()
+    return inner_function # return a wrapper function
+```
+
+
+Nhập thư viện: from PIL import Image, từ đó 
+```python
+img1 = Image.open("shutterstock_274566236.jpg")
+img1.show()
+```
+-> open file ảnh ở bên ngoài
+Nhập thư viện
+import cv2
+from google.colab.patches import cv2_imshow : chỉ có thể dùng được trên google, nếu ở jupyter note thì sử dụng cv2.imshow():
+Ví dụ
+```python
+image = cv2.imread('example/image.png')  
+cv2.imshow("test", image)
+# waits for user to press any key
+# (this is necessary to avoid Python kernel form crashing)
+cv2.waitKey(0)
+  
+# closing all open windows
+cv2.destroyAllWindows()
+```
+Hàm imread có 2 tham số , tham số thứ 2:
+![[Pasted image 20230420192322.png]]
+Định dạng mặc định IMREAD_COLOR thì ảnh đọc lên sẽ có ma trận (Height, Width, Channel) với Channel là 3 tương ứng với kênh màu Blue , Green và Red
+
+Kiểm tra kích thước ma trận:
+```python
+img.shape
+# (512,512,3) : với 3 là số kênh màu
+```
+
+Chuyển ảnh thành màu xám:
+```python
+gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+```
+
+Lưu ảnh vào thư mục hiện hành:
+```python
+cv2.imwrite("gray_image.jpg", gray_img)
+```
+trả về True là thành công
+
+Tách kênh màu: 
+lưu ý: nếu sử dụng plt.imshow: sẽ đọc màu đỏ tương ứng index là 2
+nếu sử dụng cv2.imshow: sẽ đọc màu xanh tương ứng với index là 0
+(Chat GPT)
+
+When you use the `imshow` function to display a color image, it expects the image to be in the BGR (Blue-Green-Red) format instead of the RGB (Red-Green-Blue) format. So, to display the image with proper colors, you need to convert the image from RGB to BGR. Here's an example:
+Hàm imshow sử dụng từ trái sang phải là BGR. Lớp cắt đầu tiên của các lớp là lớp Blue, cắt cắt thứ 2 là lớp Green. Và lớp cuối cùng là lớp Red. Tuy nhiên, khi display trên plt thì sẽ sử dụng hệ màu RGB
+Nếu vẽ plot luôn hàm `img[:,:,2]` thì mặc định sử dụng thang grey scale
+-> Do đó phải cắt + gép
+```python
+blue_img = img[:,:,1]
+tmp_img = np.zeros_like(img)
+tmp_img[:,:,1] = blue_img
+plt.imshow(tmp_img)
+```
+Chú ý cách đọc shape: 
+```python
+arr = np.array([[[1, 2,3], [3, 4,4]], [[1,5, 6], [7, 0,8]], [[1,5, 6], [7, 0,8]], [[1,5, 6], [7, 0,8]]])
+arr.shape
+```
+-> (4, 2, 3)
+4 lớp, mỗi lớp 2 hàng, mỗi hàng 2 cột
+![[Pasted image 20230420205226.png]]
+
+Lấy 1 vùng ảnh: 
+```python
+partial = img[200:400, 100:300]
+```
+
+BGR is a commonly used color space in computer vision and image processing. In this color space, colors are represented using three channels: blue, green, and red. Each channel is represented by an 8-bit value (0-255). The BGR color space is used in OpenCV, which is a popular library for computer vision.
+
+HSV, on the other hand, is a color space that represents colors using three parameters: hue, saturation, and value. Hue represents the color, saturation represents the intensity of the color, and value represents the brightness. The HSV color space is more intuitive for humans than the BGR color space, and it is often used for color segmentation and detection in computer vision.
+
+Blurring:
+```
+blur_img = cv2.GaussianBlue(img,(5,5),0) colab
+```
+Resizing:
+```
+resize_img = cv2.resize(img,(260,260),interpolation = cv2.INTER_AREA)
+```
