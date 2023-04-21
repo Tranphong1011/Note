@@ -504,16 +504,124 @@ resize_img = cv2.resize(img,(260,260),interpolation = cv2.INTER_AREA)
 Xử lý văn bản:
 Tách câu - > sử dụng hàm sent_tokenize
 ```python
+import nltk # thư viện nltk để xử lí văn bản
+```
+```python
 nltk.download('punkt') # tải dữ liệu chứa các từ kí tự dùng để phân tách
 from nltk.tokenize import sent_tokenize
+tokenized_text = sent_tokenize(text)
 ```
 Tách từ:
 ```python
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize # dùng hàm này
+tokenized_words = word_tokenize(text)
 ```
 
 Loại bỏ từ không quan trọng
 ```python
-nltk.download('stopwords')
-from nltk.tokenize import stopwords
+nltk.download('stopwords') # tải dữ liệu chứa các stopwords
+from nltk.corpus import stopwords
+```
+
+```python
+filtered_sent = []
+stop_words = set(stopwords.words("english"))
+for  w in tokenized_words:
+	if w.lower() not in stop_words:
+		filtered_sent.append(w)
+```
+`stopwords.words("english")` is a function call to retrieve the list of stopwords for the English language from the NLTK (Natural Language Toolkit) library in Python.
+(giá trị trả về dưới dạng list, sau đó chueyenr về set)\
+
+Hoặc có thể dùng hàm :
+```python
+filtered_words = [word for word in tokenized_words if word.lower() not in stopwords.words('english')]
+```
+
+Chuẩn hoá từ 
+2 Cách để chuẩn hoá từ là Stemmer (ít chính xác + nhanh) và Lemmatizer (chính xác + chậm)
+Chuẩn hoá từ là loại bỏ các hậu tố như ed, s, ing
+
+```python
+from nltk.stem import PorterStemmer
+from ntlk.stem.wordnet import WordNetLemmatizer
+
+ps = PorterStemmer()
+wl = WordNetLemmatizer()
+
+# đối với phương pháp Stemmer:
+ps.stem('goes') # trả về goe, expect là go thôi
+# đối với phương pháp Lemmatizer
+nltk.download('wordnet')
+wl.lemmatize('goes', "v") # kết quả là go, "v" là duuoiws dạng động từ 
+
+```
+
+Bag of Words
+
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+corpus = [ 
+		  'This is the first document', 
+		  'This document is the second document', 
+		  ' And this is the third one', 
+		  'Is this the first document'
+		]
+vectorizer = CountVectorizer() ## Create CountVectorizer object
+x= vectorizer.fit_transform(corpus)
+
+```
+```python
+vectorizer.get_feature_names_out() # Use fit_transform to generate the document-term matrix
+#array(['and', 'document', 'first', 'is', 'one', 'second', 'the', 'third', 'this'], dtype=object)
+```
+```python
+x.toarray()   
+# Print the document-term matrix
+```
+array([[0, 1, 1, 1, 0, 0, 1, 0, 1],
+       [0, 2, 0, 1, 0, 1, 1, 0, 1],
+       [1, 0, 0, 1, 1, 0, 1, 1, 1],
+       [0, 1, 1, 1, 0, 0, 1, 0, 1]], dtype=int64)
+Trong từng hàng , đếm số lượng từ. Ví dụ trong câu đầu 'This is the first document' thì 'and' ko xuất hiện ->0
+
+Xử lý âm thanh:
+`%matplotlib inline` is a command in Jupyter Notebook and JupyterLab that allows the resulting plots of data visualizations to be displayed directly in the notebook interface.
+
+```python
+import librosa.display
+import IPython.display
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+
+```python
+data, sr = librosa.load("test.mp3") # load file audio
+```
+data: chứa dữ liệu sau lấy mẫu của đoạn âm thanh. bản chất đay chỉ là dữ liệu theo trục thời gian (dạng array)
+sr: tần suất lấy mẫu của dữ liệu âm thanh
+
+Tái tạo bản âm thanh:
+```python
+IPython.display.Audio(data =data, rate = sr)
+```
+
+Tách hoạ âm (harmonic) và nhạc cụ (percussive):
+```python
+y_h, y_p = librosa.effects.hpss(data)
+IPython.display.Audio(data =y_h, rate=sr)
+IPython.display.Audio(data =y_p, rate=sr)
+```
+
+Thay đổi cao độ bài nhack
+```python
+y_shift = librosa.effects.pitch_shift(data, sr, 7) # max là 12
+IPython.display.Audio(data =y_shift, rate=sr)
+```
+
+Thay đổi tốc độ bài nhạc:
+```python
+y_slow = librosa.effects.time_stretch(data, 0.5)
+IPython.display.Audio(data =y_slow, rate=sr)
 ```
