@@ -482,7 +482,7 @@ arr.shape
 -> (4, 2, 3)
 4 lớp, mỗi lớp 2 hàng, mỗi hàng 2 cột
 ![[Pasted image 20230420205226.png]]
-
+![[Pasted image 20230422075943.png]]
 Lấy 1 vùng ảnh: 
 ```python
 partial = img[200:400, 100:300]
@@ -625,3 +625,28 @@ Thay đổi tốc độ bài nhạc:
 y_slow = librosa.effects.time_stretch(data, 0.5)
 IPython.display.Audio(data =y_slow, rate=sr)
 ```
+
+Đại số tuyến tính:
+Scalar - tensor : có 2 thông số ndim (chiều) và shape (kích thước)
+Tích 2 ma trận : `A.dot(B)`
+Ma trận chuyển vị: `A.T`
+Định thức của ma trận: `np.linalg.det(A)`
+Ma trận nghịch đảo: `np.linalg.inv(A)`
+Ma trận đường chéo: `np.diag([1, 2, 3])`
+Hạng của ma trận: `np.linalg.matrix_rank(a)`
+```python
+[[1 0 0]
+ [0 2 0]
+ [0 0 3]]
+```
+Ma trận đơn vị cấp 3: `np.eye(3)`
+Tạo ma trận : `np.zeros((x,y,z))` x lớp, y số hàng mỗi lớp, z số cột mỗi lớp
+![[Pasted image 20230422083852.png]]
+Tính chất định thức ma trận:
+![[Pasted image 20230422085835.png]]
+ Trị riêng:
+ ![[Pasted image 20230422090037.png]]
+Gradien:
+![[Pasted image 20230422090804.png]]
+
+![[Pasted image 20230422092457.png]]
