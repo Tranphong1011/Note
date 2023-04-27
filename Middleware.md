@@ -482,9 +482,93 @@ querydsl
 link deploy:
 [https://dev-jenkins.amorepacific.com/](https://dev-jenkins.amorepacific.com/)
 
+link deploy staging:
+[https://jenkins.amorepacific.com/job/STG-GECP-WAS/](https://jenkins.amorepacific.com/job/STG-GECP-WAS/)
+
+
 vn front và vn admin : build mới nhất
 pwd
 /data/logs/vn
 
 igvapp: insert, update, select
 igvon: thay đổi table
+
+{"lastName":"Roslan","birthDay":"19970116","homeZip":"20400","sex":"F","if_flag":"U","smsYN":"Y","prtnrid":"MY300028","callYN":"N","homeState":"","salOffCd":"MY13","statusCD":"01","mobileNo":"0193779615","emailYN":"Y","AUTH_KEY":"1m2k3o4p","localeCd":"en","firstName":"Nur Aishah Shahirah binti","dmYN":"N","homeAddr1":"Kuarters JKR 178 Jalan Negara","API_ID":"IF_MY_002","API_USER_ID":"MY_INNI_Magento","homeCity":"SGR","salOrgCd":"MY13","cstmIntgSeq":"5279240100006133","email":"nuraishahshahirahroslan1@gmail.com"}
+{"lastName":"Roslan","prtnrid":"MY300028","callYN":"N","salOffCd":"MY13","statusCD":"01","localeCd":"en","homeAddr1":"No 53 Jalan Desa 2/6, Bandar Country Homes","API_USER_ID":"MY_INNI_Magento","homeCity":"SGR","salOrgCd":"MY13","email":"nuraishahshahirahroslan1@gmail.com","birthDay":"19970116","empID":"","homeZip":"48000","sex":"F","if_flag":"I","smsYN":"Y","homeState":"MY-321","mobileNo":"0193779615","emailYN":"N","AUTH_KEY":"1m2k3o4p","firstName":"Nur Aishah Shahirah binti","dmYN":"N","API_ID":"IF_MY_002","cstmIntgSeq":"5279240100006133"}
+
+java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+
+{"AUTH_KEY":"1m2k3o4p","localeCd":"en","API_ID":"IF_MY_006","API_USER_ID":"MY_INNI_Magento","salOrgCd":"MY13","salOffCd":"MY13","cstmIntgSeq":"5279240100005967"}
+
+
+![[Pasted image 20230425141357.png]]
+
+![[Pasted image 20230425143334.png]]
+
+{"lastName":"Sze Leng","birthDay":"20020726","homeZip":"31300","sex":"F","if_flag":"U","smsYN":"Y","prtnrid":"MY300028","callYN":"N","homeState":"","salOffCd":"MY13","statusCD":"01","mobileNo":"0125003942","emailYN":"Y","AUTH_KEY":"1m2k3o4p","localeCd":"en","firstName":"Teoh","dmYN":"N","homeAddr1":"13，hala Pulai Jaya 5 Bandar Pulai Jaya","API_ID":"IF_MY_002","API_USER_ID":"MY_INNI_Magento","homeCity":"PRK","salOrgCd":"MY13","cstmIntgSeq":"5279240100006156","email":"szeleng112@gmail.com"}
+
+{"lastName":"Sze Leng","prtnrid":"MY300028","callYN":"N","salOffCd":"MY13","statusCD":"01","localeCd":"en","homeAddr1":"13，hala Pulai Jaya 5 Bandar Pulai Jaya","API_USER_ID":"MY_INNI_Magento","homeCity":"PRK","salOrgCd":"MY13","email":"szeleng112@gmail.com","birthDay":"20020726","empID":"","homeZip":"31300","sex":"F","if_flag":"I","smsYN":"Y","homeState":"MY-230","mobileNo":"0125003942","emailYN":"N","AUTH_KEY":"1m2k3o4p","firstName":"Teoh","dmYN":"N","API_ID":"IF_MY_002","cstmIntgSeq":"5279240100006156"}
+
+```
+plugins {
+    id 'org.springframework.boot' version '2.6.6'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+    id 'war'
+}
+
+group = 'com.amorepacific'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    maven {
+        url "https://i-nexus.apdigit.tech/repository/maven-central/"
+    }
+    maven {
+        url "https://i-nexus.apdigit.tech/repository/maven-releases/"
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        if (details.requested.group == 'org.apache.logging.log4j') {
+            details.useVersion '2.17.1'
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.2'
+    implementation 'mysql:mysql-connector-java:8.0.27'
+    implementation 'javax.servlet:jstl:1.2.7'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
+    implementation group: 'org.apache.cxf', name: 'cxf-core', version: '3.3.6'
+    implementation group: 'org.apache.cxf', name: 'cxf-spring-boot-starter-jaxrs', version: '3.3.6'
+    implementation group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: '2.9.8'
+    implementation group: 'net.sf.json-lib', name: 'json-lib', version: '2.4', classifier: 'jdk15'
+    implementation group: 'org.json', name: 'json', version: '20190722'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.3'
+    implementation group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.5.0'
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+    implementation group: 'org.slf4j', name: 'jul-to-slf4j', version: '1.7.32'
+    implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.3.0-alpha5'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.3.0-alpha5'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+```

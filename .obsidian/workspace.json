@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3bd533fcc344f06e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning and Material.md",
+                "file": "my-note/backend  - nodejs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "58c4657350972f26",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning and Material.md",
+                "file": "my-note/backend  - nodejs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning and Material.md",
+                "file": "my-note/backend  - nodejs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning and Material.md"
+                "file": "my-note/backend  - nodejs.md"
               }
             }
           }
@@ -162,12 +148,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3bd533fcc344f06e",
+  "active": "c3bfad8bd7ec280b",
   "lastOpenFiles": [
-    "ML.md",
-    "Machine Learning and Material.md",
-    "Pasted image 20230420192322.png.md",
+    "my-note/collection + transaction.md",
     "Middleware.md",
+    "my-note/test.md",
+    "Machine Learning and Material.md",
+    "Pasted image 20230425143334.png",
+    "Pasted image 20230425141357.png",
+    "ML.md",
+    "Pasted image 20230420192322.png.md",
     "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
     "Pasted image 20230418164146.png",
     "Pasted image 20230418164106.png",
@@ -186,17 +176,13 @@
     "Pasted image 20230406085426.png",
     "Pasted image 20230406085412.png",
     "Pasted image 20230406085313.png",
-    "Pasted image 20230404113345.png",
     "my-note/java.md",
     "JSP.md",
-    "Pasted image 20230328115655.png",
     "my-note/C#.md",
-    "my-note/collection + transaction.md",
     "my-note/css-note.md",
     "my-note/côngty.md",
     "my-note/react.md",
     "my-note/spring.md",
-    "my-note/tailwin.md",
-    "my-note/test.md"
+    "my-note/tailwin.md"
   ]
 }
