@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "my-note/backend  - nodejs.md",
+                "file": "Machine Learning and Material.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "my-note/backend  - nodejs.md",
+                "file": "Machine Learning and Material.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "my-note/backend  - nodejs.md",
+                "file": "Machine Learning and Material.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "my-note/backend  - nodejs.md"
+                "file": "Machine Learning and Material.md"
               }
             }
           }
@@ -150,8 +150,13 @@
   },
   "active": "c3bfad8bd7ec280b",
   "lastOpenFiles": [
-    "my-note/collection + transaction.md",
     "Middleware.md",
+    "GCP/GCP.md",
+    "Pasted image 20230427211847.png",
+    "GCP.md",
+    "GCP",
+    "my-note/backend  - nodejs.md",
+    "my-note/collection + transaction.md",
     "my-note/test.md",
     "Machine Learning and Material.md",
     "Pasted image 20230425143334.png",
@@ -175,14 +180,11 @@
     "Pasted image 20230406085441.png",
     "Pasted image 20230406085426.png",
     "Pasted image 20230406085412.png",
-    "Pasted image 20230406085313.png",
     "my-note/java.md",
     "JSP.md",
     "my-note/C#.md",
     "my-note/css-note.md",
     "my-note/côngty.md",
-    "my-note/react.md",
-    "my-note/spring.md",
-    "my-note/tailwin.md"
+    "my-note/react.md"
   ]
 }

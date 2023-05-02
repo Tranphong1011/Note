@@ -572,3 +572,14 @@ dependencies {
 }
 
 ```
+{"AUTH_KEY":"1s2d3f4g","API_ID":"IF_HK_004","API_USER_ID":"HK_LNG_Magento","salOrgCd":"HK20","salOffCd":"HK10","cstmIntgSeq":"HK10200059526"}
+
+{"AUTH_KEY":"1s2d3f4g","API_ID":"IF_HK_004","API_USER_ID":"HK_LNG_Magento","salOrgCd":"HK20","salOffCd":"HK10","cstmIntgSeq":"HK10200059526"}
+
+{"AUTH_KEY":"1m2k3o4p","localeCd":"en","pointAmount":"2000.0000","API_ID":"IF_MY_014","API_USER_ID":"MY_INNI_Magento","orderID":"IN000049775","salOrgCd":"MY13","salOffCd":"MY13","type":"REDEEM","cstmIntgSeq":"5279140003757284","useRsnCd":"000010"}
+
+{"statusMessage":"Error pointUpdate. [ points have been exceeded. remaining points :2 ]","statusCode":"E"}
+
+{"statusMessage":"Error pointUpdate. [ points have been exceeded. remaining points :2 ]","statusCode":"E"}
+
+{"AUTH_KEY":"1m2k3o4p","localeCd":"en","pointAmount":"3950.0000","API_ID":"IF_MY_014","API_USER_ID":"MY_INNI_Magento","orderID":"IN000049754","salOrgCd":"MY13","salOffCd":"MY13","type":"REDEEM","cstmIntgSeq":"5279240002610686","useRsnCd":"000010"}
