@@ -64,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "211faadc9cf6caa4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -150,7 +158,10 @@
   },
   "active": "c3bfad8bd7ec280b",
   "lastOpenFiles": [
+    "ML.md",
     "Middleware.md",
+    "Machine Learning and Material.md",
+    "Pasted image 20230504144552.png",
     "GCP/GCP.md",
     "Pasted image 20230427211847.png",
     "GCP.md",
@@ -158,10 +169,8 @@
     "my-note/backend  - nodejs.md",
     "my-note/collection + transaction.md",
     "my-note/test.md",
-    "Machine Learning and Material.md",
     "Pasted image 20230425143334.png",
     "Pasted image 20230425141357.png",
-    "ML.md",
     "Pasted image 20230420192322.png.md",
     "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
     "Pasted image 20230418164146.png",
@@ -179,7 +188,6 @@
     "Pasted image 20230406085459.png",
     "Pasted image 20230406085441.png",
     "Pasted image 20230406085426.png",
-    "Pasted image 20230406085412.png",
     "my-note/java.md",
     "JSP.md",
     "my-note/C#.md",
