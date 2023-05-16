@@ -91,7 +91,7 @@ The proposed Master's research project focuses on utilizing supervised learning 
 
 
 
-Title: Defect Detection and Quality Prediction in Additive Manufacturing using Supervised Learning
+Title: complicated supervised learning model
 
 Introduction
 
@@ -197,3 +197,167 @@ Implementing Supervised Learning models for defect detection and quality predict
 Conclusion
 
 Defect detection and quality prediction are essential factors for the successful application of Additive Manufacturing in various industries. Supervised Learning offers a promising approach to enhance quality control and detect defects in real-time, ultimately leading to improved part reliability and expanded use of AM technology. Collaborative efforts between data scientists and AM practitioners can pave the way for innovations in producing complex structures and custom parts, transforming manufacturing across multiple sectors.
+
+-----------
+Kĩ thuật bootstraping: Giả sử tính mean
+  
+```
+When you simply calculate the average score from the original dataset, you are assuming that the distribution of the test scores is normal. However, this assumption may not be true in all cases. For example, the distribution of test scores may be skewed, or it may have outliers that can significantly affect the mean.
+
+On the other hand, bootstrapping generates multiple bootstrap samples by resampling the original dataset with replacement (tức là 1 dataset có 100 records. Thay vì mean cả record, thì chọn ngẫu nhiên 50 records có trùng nhau, hay còn gọi là "replacement", tính toán trung bình và đưa vào 1 danh sách, sau đó trung bình danh sách đó). This means that each bootstrap sample is a random subset of the original dataset, and may have different statistical properties than the original dataset. By generating multiple bootstrap samples and calculating the mean of each sample, you can get a more accurate estimate of the mean score and the variability of the score.
+```
+```python
+import numpy as np
+
+# Generate 100 random test scores
+scores = np.random.randint(0, 100, 100)
+
+# Method 1: calculate mean of the original dataset
+mean1 = np.mean(scores)
+print("Method 1: Mean of original dataset =", mean1)
+
+# Method 2: bootstrap resampling to generate multiple means
+n_samples = 1000
+sample_size = 50
+bootstrap_means = []
+for i in range(n_samples):
+    sample = np.random.choice(scores, sample_size, replace=True)
+    bootstrap_means.append(np.mean(sample))
+mean2 = np.mean(bootstrap_means)
+print("Method 2: Mean of bootstrap means =", mean2)
+
+```
+
+Sự khác nhau giữa regression tasks và classification tasks:
+```
+In machine learning, there are two main types of tasks: classification and regression.
+
+Classification is a type of supervised learning task where the goal is to predict which category a new observation belongs to based on a set of input features. In classification, the output variable is discrete or categorical, meaning that it takes on a finite number of values. For example, in the famous iris dataset, the task is to classify flowers into one of three categories based on their sepal length, sepal width, petal length, and petal width.
+
+On the other hand, regression is also a type of supervised learning task where the goal is to predict a continuous numerical output based on a set of input features. In regression, the output variable is continuous, meaning that it can take on any value within a certain range. For example, in the Boston Housing dataset, the task is to predict the median value of owner-occupied homes in different Boston suburbs based on a set of input features such as crime rate, average number of rooms, and distance to employment centers.
+
+In summary, classification predicts categorical output, while regression predicts numerical output.
+```
+
+Cây quyết định
+    Weather
+      /  \
+  Sunny Rainy
+    /     \
+  Humid   Windy
+   / \     / \
+ Yes  No  Yes  No
+If the weather is sunny, you would follow the left branch and check the humidity. If the humidity is high, the decision would be to play tennis, but if it's low, the decision would be not to play tennis. If the weather is rainy, you would follow the right branch and check the windiness. If the windiness is high, the decision would be not to play tennis, but if it's low, the decision would be to play tennis.
+
+
+Random Forest Calssifier:
+![[Pasted image 20230508170845.png]]
+```python
+from sklearn import datasets
+from sklearn.svm import SVC
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a SVM classifier with linear kernel
+clf = SVC(kernel='linear', random_state=42)
+
+# Train the classifier on the training set
+clf.fit(X_train, y_train)
+
+# Use the trained classifier to predict the labels of the test set
+y_pred = clf.predict(X_test)
+
+# Evaluate the accuracy of the classifier
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+```
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data[:, [0, 2]]  # select the first and third feature for visualization
+y = iris.target
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+# Create a Random Forest classifier with 100 trees
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+# Fit the model on the training data
+rf.fit(X_train, y_train)
+# Make predictions on the testing data
+y_pred = rf.predict(X_test)
+# Calculate the accuracy of the model
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+# Plot the decision boundary
+
+x_min, x_max = X[:, 0].min() - 0.5, X[:, 0].max() + 0.5
+y_min, y_max = X[:, 1].min() - 0.5, X[:, 1].max() + 0.5
+xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1), np.arange(y_min, y_max, 0.1))
+Z = rf.predict(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+plt.figure()
+plt.contourf(xx, yy, Z, alpha=0.4)
+plt.scatter(X[:, 0], X[:, 1], c=y, alpha=0.8)
+plt.xlabel('Sepal length')
+plt.ylabel('Petal length')
+plt.show()
+```
+![[Pasted image 20230508173059.png]]
+Sự khác nhau giữa mean và mode:
+```
+Mean is the sum of all values in a data set divided by the total number of values. It is a measure of the average value of a set of data. Mean is sensitive to extreme values, also known as outliers, in the data set.
+
+Mode is the value that appears most frequently in a data set. It is a measure of the most common value in a set of data.![[Pasted image 20230508173030.png]] Mode is useful when analyzing data that has a lot of repetition or a few distinct peaks.
+```
+```
+            age <= 40
+            /      \
+   income <= 50k   income > 50k
+      /      \        /      \
+   Class1  Class2   Class3   Class4
+
+```
+
+![[Pasted image 20230508175512.png]]
+0399877910
+Phong -ttphong1011@gmail.com
+Hoàng K14 - - theguardian1011@gmail.com
+Xuân - xuanphamake@gmail.com
+Huy - anhhuydeptrai@gmail.com
+Khoa - phamkhoamerce@gmail.com
+Hiếu - anhphong4872@gmail.com
+Bảo - matbaogalaxy323@gmail.com
+Đỗ Linh - harmonyofcontrast97@gmail.com
+Yên - yenlavie21@gmail.com
+Hoa
+Liên
+Lộc
+Lợi
+Oanh
+Hà 
+Hường
+Nhoc hà 
+![[Pasted image 20230509154915.png]]
+
+https://link.springer.com/article/10.1007/s00170-022-08995-7
+A Convolutional Neural Network (CNN) classification to identify the presence of pores in powder bed fusion images
+https://www.sciencedirect.com/science/article/pii/S2214860417302051?ref=pdf_download&fr=RR-2&rr=7c48f0912f4125e9
+Application of supervised machine learning for defect detection during metallic powder bed fusion additive manufacturing using high resolution imaging.
+
+https://pubs.aip.org/aip/acp/article/2393/1/020208/2822222/Application-of-machine-learning-in-fused
+Application of machine learning in fused deposition modeling: A review

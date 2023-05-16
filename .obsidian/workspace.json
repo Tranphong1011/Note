@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e6a8cc7eadccc327",
+        "id": "de751e7686a7cef1",
         "type": "tabs",
         "children": [
           {
-            "id": "c3bfad8bd7ec280b",
+            "id": "0429e40012e18fb5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Middleware.md",
+                "file": "ML.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Middleware.md",
+                "file": "ML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Middleware.md",
+                "file": "ML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Middleware.md"
+                "file": "ML.md"
               }
             }
           }
@@ -156,12 +156,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c3bfad8bd7ec280b",
+  "active": "a9ecf8a6ac0b5ace",
   "lastOpenFiles": [
-    "Pasted image 20230505134428.png",
-    "Machine Learning and Material.md",
-    "ML.md",
     "Middleware.md",
+    "Pasted image 20230422092457.png.md",
+    "ML.md",
+    "Pr.md",
+    "scholarship.md",
+    "Machine Learning and Material.md",
+    "Pasted image 20230509154915.png",
+    "Pasted image 20230508175512.png",
+    "Pasted image 20230508175323.png",
+    "Pasted image 20230508173059.png",
+    "Pasted image 20230508173030.png",
+    "Pasted image 20230508170845.png",
+    "Pasted image 20230505134428.png",
     "Pasted image 20230504144552.png",
     "GCP/GCP.md",
     "Pasted image 20230427211847.png",
@@ -171,11 +180,8 @@
     "my-note/collection + transaction.md",
     "my-note/test.md",
     "Pasted image 20230425143334.png",
-    "Pasted image 20230425141357.png",
     "Pasted image 20230420192322.png.md",
     "my-note/Excalidraw/Drawing 2022-09-27 06.30.24.excalidraw.md",
-    "Pasted image 20230418164146.png",
-    "Pasted image 20230418164106.png",
     "my-note/Excalidraw/Drawing 2023-01-05 11.39.11.excalidraw.md",
     "my-note/Excalidraw/Drawing 2023-01-05 10.49.17.excalidraw.md",
     "my-note/Excalidraw/Drawing 2022-07-28 14.55.58.excalidraw.md",
@@ -183,17 +189,11 @@
     "DA.md",
     "Django.md",
     "Kotlin.md",
-    "Pasted image 20230410095819.png",
     "AI.md",
     "Untitled 3.md",
-    "Pasted image 20230406085459.png",
-    "Pasted image 20230406085441.png",
-    "Pasted image 20230406085426.png",
     "my-note/java.md",
     "JSP.md",
     "my-note/C#.md",
-    "my-note/css-note.md",
-    "my-note/côngty.md",
-    "my-note/react.md"
+    "my-note/css-note.md"
   ]
 }

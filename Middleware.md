@@ -377,56 +377,6 @@ PC Mac Address : E0-0A-F6-95-0D-3F
 I/O error on POST request for "https://g-ext.innisfreepos.com/v1/directmall/member/search": g-ext.innisfreepos.com; nested exception is java.net.UnknownHostException: g-ext.innisfreepos.com
 
 
-Apache CXF 3.3.6 -> 3.5.5  
-Apache Commons Collections 3.2.1 -> 3.2.2  
-Springframework 5.2.1 -> 6.0.7
-
-{"statusMessage":"Error pointUpdate. [ points have been exceeded. remaining points :20 ]","statusCode":"E"}
-
-When updating the Spring Framework from version 5.2.1 to 5.3.27, you may also need to update several other dependencies to ensure compatibility. Here's a list of some common dependencies and their recommended versions to use with Spring Framework 5.3.27:
-
-1. Spring Boot: Update to version 2.6.3 or any other version in the 2.6.x series. Spring Boot versions are paired with a specific Spring Framework version.
-
-2. Spring Security: Update to version 5.6.2 or any other version in the 5.6.x series.
-
-3. Spring Data: Update to version 2021.1.3 or any other version in the 2021.1.x series.
-
-4. Spring Cloud: Update to version 2021.0.0 or any other version in the 2021.0.x series.
-
-5. Hibernate: Update to version 5.6.7 or any other version in the 5.6.x series.
-
-6. Spring Integration: Update to version 5.5.9 or any other version in the 5.5.x series.
-
-7. Spring Batch: Update to version 4.3.5 or any other version in the 4.3.x series.
-
-8. Apache Tomcat (if using an embedded servlet container): Update to version 9.0.59 or any other version in the 9.0.x series.
-
-9. Jackson (for JSON processing): Update to version 2.13.2 or any other version in the 2.13.x series.
-
-10. Thymeleaf (for template processing): Update to version 3.0.14 or any other version in the 3.0.x series.
-
-These are just some common examples, and your project may have additional dependencies that need to be updated. Keep in mind that it's essential to run tests and verify that your application still works correctly after updating all these dependencies. Make sure to consult the documentation for each project to check for any breaking changes or known compatibility issues.
-
-
-When updating the Spring Framework from version 5.2.1 to 5.3.27, you might need to update the following dependencies:
-
-1. Spring Boot: Update to the latest compatible version (e.g., 2.5.x or 2.6.x) which supports Spring Framework 5.3. By updating Spring Boot, you will also update many of the related dependencies that Spring Boot manages.
-
-2. Spring Security: Update to a compatible version (e.g., 5.5.x or 5.6.x) if you are using it in your project.
-
-3. Spring Data: Update to a compatible version (e.g., 2020.0.x or 2021.0.x) if you are using any of the Spring Data projects.
-
-4. Spring Cloud: If you are using Spring Cloud, update to a compatible version (e.g., 2020.0.x or 2021.0.x).
-
-5. Hibernate: Update to a compatible version (e.g., 5.4.x or 5.6.x) if you are using it for JPA or as ORM.
-
-6. Jackson: Update to a compatible version (e.g., 2.11.x, 2.12.x, or 2.13.x) if you are using it for JSON serialization or deserialization.
-
-7. Apache Tomcat: Update to a compatible version (e.g., 9.0.x or 10.0.x) if you are using it as your web server.
-
-8. Other third-party libraries: Ensure that any other third-party libraries you are using are compatible with Spring Framework 5.3. Individual libraries might have specific requirements or breaking changes, so be sure to check their release notes and change logs.
-
-Before making these updates, it is advisable to review the release notes and migration guides for each dependency to understand any changes or breaking changes, and to address them accordingly in your application. Additionally, make sure to thoroughly test your application after updating the dependencies to ensure that everything works as expected
 
 
 ```groovy
@@ -573,14 +523,37 @@ dependencies {
 
 ```
 
-1.  Quality control in additive manufacturing using machine learning: Additive manufacturing is known for producing complex geometries and components, but it can be challenging to control the quality of the parts produced. Machine learning can be used to analyze data from sensors and cameras in real-time, predicting and detecting defects and optimizing the process parameters. The benefits of using machine learning in quality control include improved accuracy, reduced costs, and increased productivity. However, the main challenge is obtaining a large dataset of high-quality data to train the machine learning models effectively.
-    
-2.  Machine learning-based process optimization in additive manufacturing: Additive manufacturing processes involve a large number of parameters that can be adjusted to optimize the part's quality. Machine learning models can be trained to identify the optimal parameters to produce a part with the desired characteristics. The advantages of using machine learning in this context are reduced lead times, increased productivity, and improved part quality. However, the main challenge is the computational complexity of the models, which can require significant computing resources.
-    
-3.  Predictive maintenance in additive manufacturing using machine learning: Additive manufacturing machines require periodic maintenance to ensure that they operate reliably and produce parts of consistent quality. Machine learning models can be used to predict when maintenance is required based on sensor data from the machines. The benefits of using machine learning in predictive maintenance include reduced downtime, increased productivity, and cost savings. The main challenge is the availability of high-quality sensor data to train the machine learning models effectively.
-    
-4.  Machine learning-based material optimization in additive manufacturing: Additive manufacturing offers the potential to produce parts using a wide range of materials, including polymers, metals, and ceramics. However, the selection of materials and the optimization of their properties for specific applications can be challenging. Machine learning models can be used to predict the material properties of a part based on its design and manufacturing parameters. The benefits of using machine learning for material optimization include reduced material waste, improved part quality, and lower costs. However, the main challenge is obtaining a large dataset of high-quality material property data to train the machine learning models effectively.
-    
-5.  Real-time process monitoring in additive manufacturing using machine learning: Additive manufacturing processes involve a large number of variables that can affect part quality. Machine learning models can be used to analyze sensor data from the machines in real-time, predicting when problems may occur, and adjusting process parameters accordingly. The benefits of using machine learning in real-time process monitoring include improved part quality, reduced waste, and increased productivity. However, the main challenge is the need for high-quality sensor data, which can be difficult to obtain.
+Cách sử dụng lệnh gradle:
+./gradlew build 
+./gradlew --version
+
+The `gradlew` command is used to run Gradle tasks with the Gradle Wrapper. It is a script that handles the Gradle setup and execution, ensuring that the correct Gradle version is used for your project.
+
+IF_EC_001:
+{"AUTH_KEY":"123456","localeCd":"en","firstName":"Hoang","lastName":"Phan","API_ID":"IF_EC_001","API_USER_ID":"TW_SWS_Magento","mobileNumber":"0941069901","salOrgCd":"TW10","salOffCd":"TW20"}
+IF_EC_004:
+{"AUTH_KEY":"123456","localeCd":"en","API_ID":"IF_EC_004","API_USER_ID":"TW_LNG_Magento","salOrgCd":"TW10","salOffCd":"TW10","cstmIntgSeq":""}
+IF_EC_005:
+{"AUTH_KEY":"123456","localeCd":"en","API_ID":"IF_EC_005","API_USER_ID":"TW_LNG_Magento","salOrgCd":"TW10","salOffCd":"TW10","page":1,"cstmIntgSeq":"TW10210001071"}
+IF_EC_006:
+{"AUTH_KEY":"123456","localeCd":"en","API_ID":"IF_EC_006","API_USER_ID":"TW_LNG_Magento","salOrgCd":"TW10","salOffCd":"TW10","page":1,"cstmIntgSeq":"TW10210001071"}
+IF_MY_001:
+{"AUTH_KEY":"123456","localeCd":"en","firstName":"sontn","lastName":"sontn","API_ID":"IF_MY_001","API_USER_ID":"MY_LNG_Magento","mobileNumber":"0998123321","salOrgCd":"MY10","salOffCd":"MY10"}
+IF_MY_004:
+{"AUTH_KEY":"123456","localeCd":"en","API_ID":"IF_MY_004","API_USER_ID":"MY_LNG_Magento","salOrgCd":"MY10","salOffCd":"MY10","cstmIntgSeq":"MY10210000157"}
+IF_MY_006:{"AUTH_KEY":"123456","localeCd":"en","API_ID":"IF_MY_006","API_USER_ID":"MY_LNG_Magento","salOrgCd":"MY10","salOffCd":"MY10","page":1,"cstmIntgSeq":"MY10210000157"}
+IF_HK_001:
+{"AUTH_KEY":"123456","firstName":"nguyễn","lastName":"anh","API_ID":"IF_HK_001","API_USER_ID":"HK_LNG_Magento","mobileNumber":"12345677","countryCode":"1458003","salOrgCd":"HK20","salOffCd":"HK10"}
+IF_HK_004:
+{"AUTH_KEY":"123456","API_ID":"IF_HK_004","API_USER_ID":"HK_LNG_Magento","salOrgCd":"HK20","salOffCd":"HK10","cstmIntgSeq":"HK10210006245"}
+IF_HK_006:
+{"AUTH_KEY":"123456","API_ID":"IF_HK_006","API_USER_ID":"HK_SWS_Magento","salOrgCd":"HK20","salOffCd":"HK20","cstmIntgSeq":"HK20210001754"}
+
+{"statusCode":"1","statusMessage":"Database Error::Member information does not exist.(HK10210013912)"}
 
 
+
+{"saletime":"12:09:34","promotionKey":"CASETIFY50","orderType":"000010","orderID":"SWS000018374","rcptNO":"I6000012656","salOffCd":"HK20","AUTH_KEY":"1v2g3u4i","ffReferralCode":"","API_ID":"IF_HK_007","API_USER_ID":"HK_SWS_Magento","saledate":"20230425","orderInfo":[{"prdCD":"270320578","qty":1,"price":"280.00","salAmt":"280.00","dcAmt":"140.00","netSalAmt":"140.00","redemptionFlag":"N","pointAccount":0},{"prdCD":"270320591","qty":1,"price":"840.00","salAmt":"840.00","dcAmt":"420.00","netSalAmt":"420.00","redemptionFlag":"N","pointAccount":0}],"salOrgCd":"HK20","baReferralCode":"SWS GECP","cstmIntgSeq":"HK20210004945"}
+
+
+{"statusMessage":"Database Error::Member information does not exist.(HK20210004945)","statusCode":"1"}
