@@ -650,3 +650,151 @@ Gradien:
 ![[Pasted image 20230422090804.png]]
 
 ![[Pasted image 20230422092457.png]]
+
+Tạo dãy n phần tử: `np.arange(n)`
+Đổi dãy n phần tử về ma trận: `reshape((x, y))` , với n = x*y , x hàng, y cột
+
+Tạo list gồm n phần tử từ số 0: list(range(n))
+Ví dụ về hàm train_test_split:
+```python
+>>> import numpy as np
+>>> from sklearn.model_selection import train_test_split
+>>> X, y = np.arange(10).reshape((5, 2)), range(5)
+>>> X
+array([[0, 1],
+       [2, 3],
+       [4, 5],
+       [6, 7],
+       [8, 9]])
+>>> list(y)
+[0, 1, 2, 3, 4]
+```
+```python
+>>> X_train, X_test, y_train, y_test = train_test_split(
+...     X, y, test_size=0.33, random_state=42)
+...
+>>> X_train
+array([[4, 5],
+       [0, 1],
+       [6, 7]])
+>>> y_train
+[2, 0, 3]
+>>> X_test
+array([[2, 3],
+       [8, 9]])
+>>> y_test
+[1, 4]
+```
+```python
+>>> train_test_split(y, shuffle=False) # tức là không xáo trộn
+[[0, 1, 2], [3, 4]]
+```
+
+Support vector machine:
+```python 
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+#-   `iris.data` contains the features (i.e., petal length, petal width, sepal length, and sepal width) for each instance in the dataset.
+#-   `iris.target` contains the target variable (i.e., the class labels) for each instance in the dataset.
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+#`X` and `y` are the feature matrix and target variable, respectively.
+#`test_size` parameter is set to 0.3, which means that 30% of the data will be used for testing.
+#`random_state` parameter is set to 42, which ensures that the same random split is obtained every time the code is run. Hàm này giống như seed()
+
+# Create a Support Vector Machine classifier
+clf = SVC(kernel='linear')
+#`kernel` parameter is set to `'linear'`, which means that a linear kernel function will be used.
+
+# Train the classifier on the training set
+clf.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = clf.predict(X_test)
+#`predict` method is used to make predictions on the testing set.
+
+# Calculate the accuracy of the classifier
+accuracy = accuracy_score(y_test, y_pred)
+#`accuracy_score` function is used to calculate the accuracy of the classifier by comparing the predicted labels (`y_pred`) with the true labels (`y_test`).
+
+print(f"Accuracy: {accuracy}")
+```
+Accuracy: 1.0
+
+
+Vẽ ảnh Support vector machine: 
+Khái niệm meshgrid: use Numpy meshgrid to create a rectangular grid of x and y values.
+![[Pasted image 20230506170112.png]]
+
+Cách sử dụng hàm `np.c_`
+```python
+a = np.array([1, 2, 3, 4, 5])
+b = np.array([6, 7, 8, 9, 10])
+c = np.c_[a, b]
+```
+![[Pasted image 20230506171127.png]]
+
+Cách sử dụng hàm `.ravel()`: trả về mảng 1 chiều, giống hàm `.flatten()`
+```python
+a = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+b = a.ravel()
+```
+Flattened array: [1 2 3 4 5 6 7 8]
+
+Cách sử dụng hàm linspace: 
+```python
+np.linspace(start, stop, num)
+x = np.linspace(0, 1, 10)
+```
+![[Pasted image 20230506173901.png]]
+Công thức : step = (stop - start) / (num-1)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import svm, datasets
+
+# Load Iris dataset
+iris = datasets.load_iris()
+X = iris.data[:, :2]  # We only take the first two features for visualization
+y = iris.target
+
+# Create an instance of SVM with linear kernel
+C = 1.0  # SVM regularization parameter
+clf = svm.SVC(kernel='linear', C=C)
+
+# Fit SVM on data
+clf.fit(X, y)
+
+# Create a meshgrid of points to plot decision boundary
+x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.02),
+                     np.arange(y_min, y_max, 0.02))
+Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+
+# Plot decision boundary and data points
+Z = Z.reshape(xx.shape)
+plt.contourf(xx, yy, Z, cmap=plt.cm.coolwarm, alpha=0.8)
+plt.colorbar()
+plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.coolwarm)
+plt.colorbar()
+plt.xlabel('Sepal length - xx')
+plt.ylabel('Sepal width - yy')
+plt.xlim(xx.min(), xx.max())
+plt.ylim(yy.min(), yy.max())
+plt.xticks(np.arange(x_min, x_max, 1))
+plt.yticks(np.arange(y_min, y_max, 0.5))
+plt.title('Linear Kernel SVM')
+plt.show()
+```
+![[Pasted image 20230506182415.png]]]]

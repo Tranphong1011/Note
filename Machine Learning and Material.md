@@ -197,3 +197,8 @@ Implementing Supervised Learning models for defect detection and quality predict
 Conclusion
 
 Defect detection and quality prediction are essential factors for the successful application of Additive Manufacturing in various industries. Supervised Learning offers a promising approach to enhance quality control and detect defects in real-time, ultimately leading to improved part reliability and expanded use of AM technology. Collaborative efforts between data scientists and AM practitioners can pave the way for innovations in producing complex structures and custom parts, transforming manufacturing across multiple sectors.
+
+
+
+Support Vector Machines (SVMs) : là 1 loại thuật toán của machine learning supervised có thể sử dụng trong bài toán phân loại và hồi quy
+-> finding the optimal hyperplane that separates two classes in a high-dimensional feature space.
