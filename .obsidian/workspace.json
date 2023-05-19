@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML.md",
+                "file": "Pr.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML.md",
+                "file": "Pr.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML.md",
+                "file": "Pr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML.md"
+                "file": "Pr.md"
               }
             }
           }
@@ -156,12 +156,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a9ecf8a6ac0b5ace",
+  "active": "0429e40012e18fb5",
   "lastOpenFiles": [
     "Middleware.md",
-    "Pasted image 20230422092457.png.md",
     "ML.md",
     "Pr.md",
+    "Pasted image 20230422092457.png.md",
     "scholarship.md",
     "Machine Learning and Material.md",
     "Pasted image 20230509154915.png",
