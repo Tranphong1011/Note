@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pr.md",
+                "file": "Learning Ielts.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "58c4657350972f26",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pr.md",
+                "file": "Learning Ielts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pr.md",
+                "file": "Learning Ielts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pr.md"
+                "file": "Learning Ielts.md"
               }
             }
           }
@@ -159,10 +160,10 @@
   "active": "0429e40012e18fb5",
   "lastOpenFiles": [
     "Middleware.md",
+    "Learning Ielts.md",
     "ML.md",
-    "Pr.md",
-    "Pasted image 20230422092457.png.md",
     "scholarship.md",
+    "Pasted image 20230422092457.png.md",
     "Machine Learning and Material.md",
     "Pasted image 20230509154915.png",
     "Pasted image 20230508175512.png",

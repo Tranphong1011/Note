@@ -1,3 +1,4 @@
+String url = "http://localhost:8090/test";
 Connect Cissco
 Staging
 Test postman cho stagin;
@@ -15,7 +16,7 @@ password moba: Phongtran97
 
 đăng nhập git: https://gitlab.apdigit.tech/
 Gitlab 계정 아이디 : tranthanh.cj 
-Gitlab 계정 패스워드: h!EwUxN9Wk
+Gitlab 계정 패스워드: rW&daW6&R4
 
 Production
 https://gecp-middleware-adm.amorepacific.com/ap-admin/main.fo?lang=en#
