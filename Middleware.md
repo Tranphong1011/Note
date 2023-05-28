@@ -563,3 +563,46 @@ IF_HK_006:
 
 {"saletime":"12:06:34","promotionKey":null,"orderType":"000010","orderID":"APB000004835","rcptNO":"I000003287","salOffCd":"HK30","AUTH_KEY":"1e2r3t4y","ffReferralCode":"","API_ID":"IF_HK_007","API_USER_ID":"HK_AP_Magento","saledate":"20230518","orderInfo":[{"prdCD":"279067386","qty":4,"price":"290.00","salAmt":"1160.00","dcAmt":"585.00","netSalAmt":"575.00","redemptionFlag":"N","pointAccount":0},{"prdCD":"111388251","qty":2,"price":"0.00","salAmt":"0.00","dcAmt":"0.00","netSalAmt":"0.00","redemptionFlag":"N","pointAccount":0},{"prdCD":"111388255","qty":2,"price":"0.00","salAmt":"0.00","dcAmt":"0.00","netSalAmt":"0.00","redemptionFlag":"N","pointAccount":0}],"salOrgCd":"HK20","baReferralCode":"AP GECP","cstmIntgSeq":"HK30201871021"}
 
+{"lastName":"陳","birthDay":"19931026","homeZip":"115","race":"","sex":"F","smsYN":"N","callYN":"N","homeState":"115","statusCD":"01","salOffCd":"TW10","mobileNo":"0912748112","emailYN":"N","AUTH_KEY":"2n4j5k1l","localeCd":"en","firstName":"君竹","dmYN":"Y","homeAddr1":"忠孝東路六段70巷21弄16號7樓","API_ID":"IF_EC_003","API_USER_ID":"pos_TW_LNG","homeCity":"T001","salOrgCd":"TW10","cstmIntgSeq":"TW10100578699","email":"es262324@gmail.com"}
+
+{"AUTH_KEY":"1m2k3o4p","localeCd":"en","API_ID":"IF_MY_004","API_USER_ID":"MY_INNI_Magento","salOrgCd":"MY13","salOffCd":"MY13","cstmIntgSeq":"5279240100001052"}
+
+
+Please check the case below.
+
+  
+
+5/19 10:47 S000022041 The order was processed by SAP and
+
+Order response received from GECP at 02:35 on 5/20.
+
+  
+
+In other words, there is a difference of 16 hours in terms of time, and I need to know why there is such a long time difference.
+
+TST: UTC + 8 = GTM + 13
+KST: UTC+ 9  = GTM + 9
+
+SAP: 11h30 19/5 -> 2h30 19/5 
+Magento: 20h30 19/5
+EC: 23h 19/5
+
+{"AUTH_KEY":"2w3e4r5t","localeCd":"en","API_ID":"WMI1746","API_USER_ID":"SAP","source":"L0014","body":[{"orderStatusData":{"source":"L0014","mallId":"TW2","odrno":"S000022038","odrstat":"1","ztrackId":"76576125096","ugcod":"311","ugtxt":"一般订货-正常 3749027496 已保存"}},{"orderStatusData":{"source":"L0014","mallId":"TW2","odrno":"S000022041","odrstat":"1","ztrackId":"","ugcod":"311","ugtxt":"一般订货-正常 3749027498 已保存"}}]}
+
+
+{"AUTH_KEY":"1m2k3o4p","localeCd":"en","pointAmount":"5300.0000","API_ID":"IF_MY_014","API_USER_ID":"MY_INNI_Magento","orderID":"IN000053057","salOrgCd":"MY13","salOffCd":"MY13","type":"REDEEM","cstmIntgSeq":"5279240002640578","useRsnCd":"000010"}
+
+
+IF_EC_016  
+IF_HK_003  
+IF_HK_005  
+IF_HK_009  
+IF_HK_011  
+IF_MY_003  
+IF_MY_011  
+IF_MY_012  
+IF_MY_013  
+SDI1797  
+SDI1798  
+WMI1746  
+WMI1748

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning Ielts.md",
+                "file": "Super Shit.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "58c4657350972f26",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning Ielts.md",
+                "file": "Super Shit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning Ielts.md",
+                "file": "Super Shit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning Ielts.md"
+                "file": "Super Shit.md"
               }
             }
           }
@@ -160,8 +159,11 @@
   "active": "0429e40012e18fb5",
   "lastOpenFiles": [
     "Middleware.md",
-    "Learning Ielts.md",
+    "Super Shit.md",
+    "my-note/java.md",
     "ML.md",
+    "Những điều cần biết.md",
+    "Kotlin.md",
     "scholarship.md",
     "Pasted image 20230422092457.png.md",
     "Machine Learning and Material.md",
@@ -189,12 +191,9 @@
     "my-note/Excalidraw/Drawing 2022-07-26 14.43.02.excalidraw.md",
     "DA.md",
     "Django.md",
-    "Kotlin.md",
     "AI.md",
     "Untitled 3.md",
-    "my-note/java.md",
     "JSP.md",
-    "my-note/C#.md",
-    "my-note/css-note.md"
+    "my-note/C#.md"
   ]
 }
